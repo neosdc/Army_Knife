@@ -16,15 +16,16 @@ async def main():
     cookies = await page.cookies()
     print(cookies)    
     await page.evaluate('''() => {        
-        document.getElementById("gw_user_id").value = "";
-        document.getElementById("gw_user_pw").value = "";
+        document.getElementById("gw_user_id").value = "neosdc";
+        document.getElementById("gw_user_pw").value = "vrmatrix3";
         encryptSubmit();        
     }''')
 	
     sleep(3)
     cookies = await page.cookies()
     print(cookies)
-	
+
+    #대화상자 무시
     page.on('dialog', lambda dialog: asyncio.ensure_future(close_dialog(dialog)))
     await page.goto('http://gw.roigames.co.kr/chtml/groupware/groupware_popup.php?file=gw_indolence_input&mode=attendance_out&employee_id=neosdc')
     sleep(3)
