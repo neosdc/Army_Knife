@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <setting id="controlroom_address" type="text" default="madcasper.mynetgear.com" label="Control Room Address"/>
+    <setting id="controlroom_port" type="number" default="8000" label="Control Room Port"/>
+    <setting id="ping_interval" type="number" default="180" label="Ping Intervals(sec)"/>
+    <setting id="download_folder" type="folder" default="/tmp/xbmcdownload/" source="auto" option="writeable" label="File Download Path"/>
+    <setting id="display_name" type="text" default="default" label="Display Host Name"/>
+</settings>
